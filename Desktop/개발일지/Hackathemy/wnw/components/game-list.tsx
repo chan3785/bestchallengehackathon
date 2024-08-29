@@ -12,16 +12,15 @@ export const GameList = () => {
   });
   console.log(allGames);
 
-  if (!allGames) {
+  if (!allGames || allGames.length === 0) {
     return <></>;
   }
 
+  const firstGame = allGames[0];
+
   return (
     <div className="gap-15 grid w-full grid-cols-1 md:grid-cols-3">
-      {allGames &&
-        allGames.map((game: any) => {
-          return <GameItem key={game?.gameId} game={game} />;
-        })}
+      <GameItem key={firstGame?.gameId} game={firstGame} />
     </div>
   );
 };
