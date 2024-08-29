@@ -27,12 +27,12 @@ export const GameItem = ({ game }: any) => {
         </CardHeader>
         <CardContent className="grid gap-4">
           <h1 className="text-lg font-bold">
-            {game.gameTitle ?? 'Game Title'}
+            ESG Project Voting Round!
           </h1>
           <div className="flex items-center space-x-4 rounded-md border p-4">
             <div className="flex-1 space-y-2">
               <div className="h-20 items-center justify-end text-xs text-zinc-400">
-                {game.description}
+              Participate in funding impactful Environmental, Social, and Governance initiatives. Cast your vote to decide which project receives collective support.
               </div>
             </div>
           </div>
@@ -44,7 +44,7 @@ export const GameItem = ({ game }: any) => {
                 href={`/games/${game.gameId}?key=${game.gameId}`}
                 key={game.gameId}
               >
-                <Button className="w-26 flex h-10 items-center bg-amber-400 font-semibold text-white">
+                <Button className="w-26 flex h-10 items-center bg-green-500 font-semibold text-white">
                   Enter Fund
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

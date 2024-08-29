@@ -13,12 +13,12 @@ export const Account = () => {
     <div className="flex items-center space-x-2">
       <h3>
         {account.status === 'connected' ? (
-          <Button onClick={() => disconnect()} className='bg-amber-400 rounded-3xl'>
+          <Button onClick={() => disconnect()} className='bg-green-500 rounded-3xl text-white'>
             <h3 className="text-md mr-2">{ellipsisAddress(account.address)}</h3>
           </Button>
         ) : (
           connectors.map((connector) => (
-            <Button key={connector.uid} onClick={() => connect({ connector }) } className='bg-amber-400'>
+            <Button key={connector.uid} onClick={() => connect({ connector }) } className='bg-green-500 text-white'>
               Connect
             </Button>
           ))

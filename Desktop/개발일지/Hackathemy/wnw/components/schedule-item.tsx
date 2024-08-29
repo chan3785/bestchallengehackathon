@@ -7,17 +7,11 @@ import {
 
 import { projects } from '@/constants';
 
-export const ScheduleItem = ({ selectedProject }: { selectedProject: string | null }) => {
+export const ScheduleItem = () => {
   return (
     <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-1">
       {projects.map((project, index) => (
-        <Card
-          key={index}
-          id={`project-${project.name}`}
-          className={`w-full cursor-pointer hover:shadow-lg transition-all duration-300 ${
-            selectedProject === project.name ? 'border-4 border-yellow-500' : ''
-          }`}
-        >
+        <Card key={index} className="w-full cursor-pointer hover:shadow-lg">
           <CardHeader>
             <CardTitle className="text-lg font-bold">{project.name}</CardTitle>
           </CardHeader>
