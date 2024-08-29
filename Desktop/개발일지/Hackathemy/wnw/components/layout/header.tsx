@@ -9,16 +9,13 @@ export default function Header() {
       <nav className="ml-20 mr-20 flex h-20 items-center justify-between px-4">
         <div className="flex items-center space-x-1">
           <Link href={'/'}>
-            <Image src="/logo.png" alt="Logo" width={90} height={38} />
-          </Link>
-          <Link href={'/'}>
             <Button className="w-30 ml-7 h-8 font-semibold" variant="ghost">
               Funds
             </Button>
           </Link>
           <Link href={'/schedule'}>
             <Button className="w-30 ml-7 h-8 font-semibold" variant="ghost">
-              Fund Round Schedule
+              Ongoin Project
             </Button>
           </Link>
         </div>

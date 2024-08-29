@@ -8,9 +8,9 @@ import {
 } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { ScheduleItem } from './schedule-item';
-import { useState } from 'react';
 
-export const ScheduleList = ({ selectedProject }: { selectedProject: string | null }) => {
+export const ScheduleList = () => {
+
   return (
     <ScrollArea className="h-full">
       <div className="flex-1 space-y-4 p-4 pt-6 md:p-8">
@@ -20,7 +20,7 @@ export const ScheduleList = ({ selectedProject }: { selectedProject: string | nu
               <CardTitle>Ongoing Projects!</CardTitle>
             </CardHeader>
             <CardContent className="pl-2">
-              <ScheduleItem selectedProject={selectedProject} />
+              <ScheduleItem/>
             </CardContent>
           </Card>
         </div>

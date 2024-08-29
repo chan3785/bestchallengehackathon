@@ -93,7 +93,7 @@ export default function Page() {
 
       <div className="flex h-full space-x-8">
         <div className="h-full w-2/3 space-y-20 overflow-y-auto pr-2">
-          <ScheduleList selectedProject={selectedProject} />
+          <ScheduleList/>
           <UserList />
         </div>
 
