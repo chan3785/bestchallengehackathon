@@ -1,34 +1,26 @@
-export const tokenInfos = [
+export const projects = [
   {
-    name: 'ETH',
-    address: '0x54E8d3c6Bfa55F809d5687AAB4d1Eb00f13394B4',
-    id: 1,
-    startPrice: 1,
-    image:
-      'https://assets.coingecko.com/coins/images/279/standard/ethereum.png?1696501628'
+    name: 'LGBTQ+ Rights Advocacy',
+    description: 'Supporting LGBTQ+ rights through education, advocacy, and legal assistance. This project aims to create a more inclusive society by promoting equal rights for all, regardless of sexual orientation or gender identity.'
   },
   {
-    name: 'EthRunner',
-    address: '0x456aaA39b223FE8D0A0e5C4F27eAD9083C756Cc5',
-    id: 0,
-    startPrice: 252,
-    image:
-      'https://assets.coingecko.com/coins/images/279/large/ethereum.png?1595348880'
+    name: 'Migrant Worker Support',
+    description: 'Providing support and resources for migrant workers to ensure fair treatment, legal representation, and access to essential services. This project focuses on empowering migrant workers by offering educational programs, health care access, and legal aid.'
   },
   {
-    name: 'WTON',
-    address: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
-    id: 2,
-    startPrice: 230,
-    image:
-      'https://assets.coingecko.com/coins/images/17980/standard/img-ton.jpg?1724681212'
+    name: 'Disability Accessibility Improvement',
+    description: 'Improving accessibility for people with disabilities by funding projects that enhance physical spaces, digital accessibility, and inclusive design practices. This initiative supports the creation of an environment where everyone can participate fully, regardless of physical limitations.'
   },
   {
-    name: 'Pepe',
-    address: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc1',
-    id: 3,
-    startPrice: 2,
-    image:
-      'https://assets.coingecko.com/coins/images/29850/standard/pepe-token.jpeg?1696528776'
+    name: 'Rural Education Development',
+    description: 'Enhancing education opportunities in rural areas by supporting projects that build schools, provide educational materials, and train teachers. This project focuses on bridging the education gap between urban and rural communities.'
   },
+  {
+    name: 'Women Empowerment Programs',
+    description: 'Supporting women empowerment through education, entrepreneurship, and leadership programs. This project aims to provide women with the resources and skills needed to achieve economic independence and leadership roles in their communities.'
+  },
+  {
+    name: 'Mental Health Awareness',
+    description: 'Promoting mental health awareness and providing support for individuals facing mental health challenges. This project focuses on reducing stigma, providing access to mental health services, and creating supportive communities to improve overall well-being.'
+  }
 ];

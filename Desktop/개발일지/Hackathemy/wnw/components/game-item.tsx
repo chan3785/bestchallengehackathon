@@ -11,26 +11,17 @@ import {
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { useEffect, useState } from 'react';
-import { tokenInfos } from '@/constants';
+import { projects } from '@/constants';
 
 export const GameItem = ({ game }: any) => {
-  const tokenInfo = tokenInfos.find((item) => item.id === Number(game.gameId));
 
-  console.log(tokenInfo);
 
   return (
     <div className="" key={game.gameId}>
       <Card className="my-4 h-full w-96 max-w-sm cursor-pointer hover:shadow-lg">
         <CardHeader>
           <CardTitle className="mb-4 flex">
-            <Image
-              src={tokenInfo?.image ?? '/logo.png'}
-              alt="Logo"
-              width={30}
-              height={30}
-              className="mr-4"
-            />
-            {tokenInfo?.name ?? 'Token Name'}
+            Round 1
           </CardTitle>
           <hr className="border-t" />
         </CardHeader>

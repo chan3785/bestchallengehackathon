@@ -21,7 +21,7 @@ import React from 'react';
 import { useWriteContract } from 'wagmi';
 import { DatePicker } from '@nextui-org/react';
 import { now } from '@internationalized/date';
-import { tokenInfos } from '@/constants';
+import { projects } from '@/constants';
 import { ethers } from 'ethers';
 
 const formSchema = z.object({
@@ -56,7 +56,7 @@ export const CreateForm: React.FC = () => {
       const address = data.project_address;
 
       // 입력받은 address와 일치하는 tokenInfo를 찾음
-      const tokenInfo = tokenInfos.find(
+      const tokenInfo = projects.find(
         (item) => item.address.toLowerCase() === address?.toLowerCase()
       );
 

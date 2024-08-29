@@ -17,7 +17,7 @@ import { useSearchParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
 import Image from 'next/image';
-import { tokenInfos } from '@/constants';
+import { projects } from '@/constants';
 
 export function GameDetailVote() {
   const WNW_PRECOMPILE_ADDRESS = '0x8b6eC36dB2Cc17D3b16D52DdA334238F24EE7Ed6';
@@ -27,6 +27,8 @@ export function GameDetailVote() {
   const [betUp, setBetUp] = useState<boolean | null>(null); // Up/Down 선택 상태
   const [amount, setAmount] = useState(''); // Input 필드에 입력된 숫자
   const [clicked, setClicked] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<string | null>(null); // 선택된 버튼 상태
+
 
   const { data: game }: any = useReadContract({
     address: WNW_PRECOMPILE_ADDRESS,
@@ -94,7 +96,6 @@ export function GameDetailVote() {
     console.log('undefined');
     return <></>;
   }
-  const tokenInfo = tokenInfos.find((item) => item.id === Number(game.gameId));
 
   const upAmount = game.upAmount ? BigInt(game.upAmount) : BigInt(0);
   const downAmount = 10 ** 18;
@@ -157,6 +158,11 @@ export function GameDetailVote() {
     }
 
     return buttons;
+  };
+
+  const handleProjectSelect = (projectName: string) => {
+    setSelectedProject(projectName);
+    document.getElementById(`project-${projectName}`)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -234,7 +240,22 @@ export function GameDetailVote() {
             <div className="text-sm font-bold">Funding progress will be...</div>
           </div>
         </div>
-
+        <div className="flex flex-col gap-2 ">
+          {projects.slice(0, 3).map((project) => (
+            <button
+              key={project.name}
+              className={`h-[55px] w-[335px] rounded-2xl font-semibold transition-transform duration-75 focus:outline-none 
+                ${
+                  selectedProject === project.name
+                    ? 'bg-[#00A29A] text-white'
+                    : 'bg-[#E9B603] text-black'
+                }`}
+              onClick={() => handleProjectSelect(project.name)}
+            >
+              project name: {project.name}
+            </button>
+          ))}
+        </div>
         <div className="grid grid-cols-2"></div>
         <div className="flex flex-row justify-between">
           <div className="flex items-center font-bold">
