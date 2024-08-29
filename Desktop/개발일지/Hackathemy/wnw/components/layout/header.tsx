@@ -21,11 +21,6 @@ export default function Header() {
               Fund Round Schedule
             </Button>
           </Link>
-          <Link href={'/create-bet'}>
-            <Button className="w-30 ml-7 h-8 bg-amber-400 font-semibold">
-              Create Round
-            </Button>
-          </Link>
         </div>
         <div className="flex items-center gap-2">
           <Account />

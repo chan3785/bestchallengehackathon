@@ -14,25 +14,19 @@ import { useEffect, useState } from 'react';
 import { projects } from '@/constants';
 
 export const GameItem = ({ game }: any) => {
-
-
   return (
     <div className="" key={game.gameId}>
       <Card className="my-4 h-full w-96 max-w-sm cursor-pointer hover:shadow-lg">
         <CardHeader>
-          <CardTitle className="mb-4 flex">
-            Round 1
-          </CardTitle>
+          <CardTitle className="mb-4 flex">Round 1</CardTitle>
           <hr className="border-t" />
         </CardHeader>
         <CardContent className="grid gap-4">
-          <h1 className="text-lg font-bold">
-            {game.gameTitle ?? 'Game Title'}
-          </h1>
+          <h1 className="text-lg font-bold">fund title</h1>
           <div className="flex items-center space-x-4 rounded-md border p-4">
             <div className="flex-1 space-y-2">
               <div className="h-20 items-center justify-end text-xs text-zinc-400">
-                {game.description}
+                fund description
               </div>
             </div>
           </div>

@@ -27,7 +27,7 @@ export const UserList = () => {
     abi: WNW_ABI,
     functionName: 'getGameList'
   });
-  
+
   if (!allGames) {
     return <></>;
   }
@@ -35,18 +35,12 @@ export const UserList = () => {
   return (
     <ScrollArea className="h-full">
       <div className="flex-1 space-y-4 p-4 pt-6 md:p-8">
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        </div>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4"></div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-7">
           <Card className="col-span-4">
             <CardContent className="pl-2">
               <Tabs defaultValue="all" className="space-y-4">
-                <TabsContent value="all" className="space-y-4">
-                  {
-                    allGames.map((game: any) => {
-                      return <UserItem key={game.id} game={game} />;
-                    })}
-                </TabsContent>
+                <TabsContent value="all" className="space-y-4"></TabsContent>
               </Tabs>
             </CardContent>
           </Card>

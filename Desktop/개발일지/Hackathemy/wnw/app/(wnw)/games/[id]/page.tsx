@@ -81,22 +81,13 @@ export default function Page() {
     <div className="mt-10 max-h-screen space-y-6 overflow-y-auto p-4 md:p-8">
       <div className="flex w-4/6 justify-between">
         <h1 className="mb-5 scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-3xl">
-          {gameTitle || 'Loading...'}
+          Round 1 is on funding!
         </h1>
       </div>
 
       <div className="flex space-x-6">
         <Badge className="text-F7F8F8 rounded-3xl bg-[#575757] p-1.5 px-5 text-xs">
-          {tokenName}
-        </Badge>
-        <Badge className="text-F7F8F8 rounded-3xl bg-[#575757] p-1.5 px-5 text-xs">
           {!game?.isEnded ? `Ends in ${timeLeft}` : 'End'}
-        </Badge>
-        <Badge className="text-F7F8F8 rounded-3xl bg-[#575757] p-1.5 px-5 text-xs">
-          Event Date: {eventDate}
-        </Badge>
-        <Badge className="text-F7F8F8 rounded-3xl bg-[#575757] p-1.5 px-5 text-xs">
-          {game?.category || 'Loading...'}
         </Badge>
       </div>
 
@@ -107,7 +98,7 @@ export default function Page() {
         </div>
 
         <div className="h-full w-1/3 space-y-4 overflow-y-auto pl-2">
-          <GameDetailVote/>
+          <GameDetailVote />
         </div>
       </div>
     </div>

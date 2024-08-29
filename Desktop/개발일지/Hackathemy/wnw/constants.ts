@@ -1,9 +1,5 @@
 export const projects = [
   {
-    name: 'LGBTQ+ Rights Advocacy',
-    description: 'Supporting LGBTQ+ rights through education, advocacy, and legal assistance. This project aims to create a more inclusive society by promoting equal rights for all, regardless of sexual orientation or gender identity.'
-  },
-  {
     name: 'Migrant Worker Support',
     description: 'Providing support and resources for migrant workers to ensure fair treatment, legal representation, and access to essential services. This project focuses on empowering migrant workers by offering educational programs, health care access, and legal aid.'
   },

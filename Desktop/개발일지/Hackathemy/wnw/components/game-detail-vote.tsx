@@ -29,7 +29,6 @@ export function GameDetailVote() {
   const [clicked, setClicked] = useState(false);
   const [selectedProject, setSelectedProject] = useState<string | null>(null); // 선택된 버튼 상태
 
-
   const { data: game }: any = useReadContract({
     address: WNW_PRECOMPILE_ADDRESS,
     abi: WNW_ABI,
@@ -162,7 +161,9 @@ export function GameDetailVote() {
 
   const handleProjectSelect = (projectName: string) => {
     setSelectedProject(projectName);
-    document.getElementById(`project-${projectName}`)?.scrollIntoView({ behavior: 'smooth' });
+    document
+      .getElementById(`project-${projectName}`)
+      ?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -270,15 +271,6 @@ export function GameDetailVote() {
             placeholder="0"
             className="w-full border-b border-[#B6B6B6] bg-white px-2 text-right text-lg focus:outline-none"
           />
-
-          <Image
-            src="https://assets.coingecko.com/coins/images/825/standard/bnb-icon2_2x.png?1696501970"
-            alt="Logo"
-            width={25}
-            height={25}
-            className="mr-0"
-          />
-          <span className=" text-xl font-bold text-black">BNB</span>
         </div>
         <button
           className={`h-[55px] w-[335px] rounded-2xl font-semibold text-white shadow-md transition-transform duration-75 focus:outline-none ${
@@ -296,24 +288,6 @@ export function GameDetailVote() {
             : 'Confirm'}
         </button>
       </CardContent>
-      <button
-        className="text-bold rounded bg-white"
-        onClick={() => {
-          if (currentPrice !== null) {
-            console.log(game.gameId, currentPrice.toFixed(0));
-            writeContract({
-              abi: WNW_ABI,
-              address: WNW_PRECOMPILE_ADDRESS,
-              functionName: 'endGame',
-              args: [game.gameId, currentPrice.toFixed(0)]
-            });
-          } else {
-            console.log('Current price is not available yet');
-          }
-        }}
-      >
-        End Round (DEMO)
-      </button>
     </Card>
   );
 }
